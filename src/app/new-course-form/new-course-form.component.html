@@ -1,0 +1,18 @@
+<h1 class="display-4 text-center mb-4 mt-3">Form Array in Reactive Form Type</h1>
+<form>
+  <div *ngIf="form.errors" class="alert alert-danger">
+    You are submitting an empty data
+  </div>
+  <input 
+    type="text"
+    class="form-control"
+    (keyup.enter)="addTopic(topic)"
+    #topic
+  >
+  <ul class="list-group">
+    <li 
+      *ngFor="let topic of topics.controls" 
+      class="list-group-item"
+      (click)="removeTopic(topic)">{{ topic.value }}</li>
+  </ul>
+</form>
