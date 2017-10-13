@@ -107,4 +107,12 @@ export class PostsComponent implements OnInit {
       );
   }
 
+
+  // Code if we want to redirect a user with parameters in a URL
+  // submit() {
+  //   this.router.navigate(['posts'], {
+  //     queryParams: { page: 1, order: 'newest' }
+  //   });
+  // }
+
 }
